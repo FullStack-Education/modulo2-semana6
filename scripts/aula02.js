@@ -26,6 +26,17 @@ localStorage.setItem("taLogado", false);
 localStorage.removeItem("idade");
 //Plus: Para limpar todos os itens do localStorage, você pode usar o método clear().
 
+//Plus
+// ============== SessionStorage ==============
+//Criar ou atualizar
+sessionStorage.setItem("idade", 19);
+//Capturar
+let idade2 = sessionStorage.getItem("idade");
+console.log(idade2);
+//Remover
+sessionStorage.removeItem("idade");
+
+
 // ============== SetTimeout ==============
 function showToast(message) {
     const toast = document.getElementById('toast');
