@@ -1,97 +1,200 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 /* Estilos para a página principal dos conteudos do site */
 /* Estilos Gerais */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 4px solid #0056b3;
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px solid #0056b3;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 24px;
+  margin: 0;
+  font-size: 24px;
 }
 
 h3 {
-    margin-top: 20px;
-    font-size: 20px;
+  margin-top: 20px;
+  font-size: 20px;
 }
 
 main {
-    padding: 20px;
+  padding: 20px;
 }
 
 section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#texto, #curiosidades {
-    margin-bottom: 40px;
+#texto,
+#curiosidades {
+  margin-bottom: 40px;
 }
 
 .paragrafo {
-    margin: 10px 0;
-    line-height: 1.6;
+  margin: 10px 0;
+  line-height: 1.6;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 #toast {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-    transition: visibility 0s, opacity 0.5s linear;
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 #toast.show {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 #toast.hide {
-    visibility: hidden;
-    opacity: 0;
+  visibility: hidden;
+  opacity: 0;
 }
 
 #clock {
-    font-size: 48px;
-    padding: 20px;
-    border: 2px solid #61dafb;
-    border-radius: 10px;
-    background-color: #20232a;
+  font-size: 48px;
+  padding: 20px;
+  border: 2px solid #61dafb;
+  border-radius: 10px;
+  background-color: #20232a;
+  color: #fff;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
     color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+.content div.image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content img {
+  display: block;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 100px;
+}
+
+/* Estilo geral da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+/* Estilo para as células da tabela */
+th,
+td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para o cabeçalho */
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Linhas alternadas */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Estilo para hover nas linhas */
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilo responsivo para telas pequenas */
+@media (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: nowrap;
+  }
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
 }

@@ -29,11 +29,70 @@
         <div id="clock"></div>
       </section>
 
+      <section>
+        <div>
+          <h3>Pokedex</h3>
+
+          <form id="form-pokemon" onsubmit="buscarPokemon(event)">
+            <label for="">Digite o nome do pokemon aqui</label>
+            <input type="text" id="input-pokemon" placeholder="Pikachu" />
+            <button type="submit">Buscar</button>
+          </form>
+
+          <table id="table-info">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Peso</th>
+                <th>Altura</th>
+                <th>Tipo primário</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td>1</td>
+                <td>Bulbasaur</td>
+                <td>69</td>
+                <td>7</td>
+                <td>Grass</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <div class="image">
+            <img id="image-character" src="https://rickandmortyapi.com/api/character/avatar/157.jpeg" alt="Hole in the Wall">
+          </div>
+          <table id="table-character">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Espécie</th>
+                <th>Origem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td>157</td>
+                <td>unknown</td>
+                <td>Hole</td>
+                <td>Hole</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
     </main>
 
     <!-- <script src="./scripts/aula01.js"></script> -->
     <!-- <script src="./scripts/aula02.js"></script> -->
-    <script src="./scripts/aula03.js"></script>
+    <!-- <script src="./scripts/aula03.js"></script> -->
     <!-- <script src="./scripts/aula04.js"></script> -->
   </body>
 </html>
